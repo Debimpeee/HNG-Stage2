@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>HNG Stage Two</title>
+</head>
+<body>
+    <main>
+        <div class="first">
+            <img src="Debimpe.jpg" alt="profile picture" data-testid="slackProfilePicture">
+            <div class="details">
+                <h1 data-testid="slackDisplayName">Bimps</h1>
+                <p data-testid="slackEmail" class="email">adebimpefarinde@gmail.com</p>
+                <a href="https://hng.tech/learn" data-testid="hngLink">hng.tech/learn</a>
+                <a href="https://keyword.dog/" data-testid="keywordLink">keyword.dog/</a>
+                <a href="https://scrapeanyweb.site/" data-testid="scrapeanywebLink">scrapeanyweb.site/</a>
+            </div>
+        </div>
+
+        <div class="date-time">
+            <p data-testid="currentDay" id="utc-day-of-week"></p>
+            <p data-testid="currentTimeUTC" id="utc-time"></p>
+        </div>
+       
+        <div class="tech-goals">
+            <h2>My Tech Goals For The Next Two Years</h2>
+            <ul>
+                <li>Embrace Continuous Learning</li>
+                <li>Deepen Programming Knowledge</li>
+                <li>Learn Advanced Frameworks and Libraries</li>
+                <li>Continuously Update and Improve My Personal Portfolio</li>
+                <li>Build a Professional Network within Web Development</li>
+                <li>Seek Mentorship from Experienced Developers</li>
+                <li>Mentor Junior/Upcoming Web Developers</li>
+            </ul>
+        </div>
+
+        <script>
+        
+            const currentUTCDate = new Date();
+            
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            
+            const utcDayOfWeek = daysOfWeek[currentUTCDate.getUTCDay()];
+            
+            const utcTime = currentUTCDate.toISOString().split('T')[1].split('.')[0];
+            
+            document.getElementById('utc-day-of-week').textContent = utcDayOfWeek;
+            document.getElementById('utc-time').textContent = utcTime;
+
+        </script>
+        
+    </main>
+</body>
+</html>
